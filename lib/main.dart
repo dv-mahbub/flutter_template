@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_template/core/logger/riverpod_log.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ProviderScope(observers: [RiverpodObserver()], child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
